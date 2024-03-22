@@ -1,27 +1,13 @@
-// ---------- Exercício 1 ------------ //
- 
-function map(arr, fn) {
-    const arr2 = [];
-    for (let i = 0; i< arr.length; i++) {
-        const valor = fn(arr[i]);
-        arr2.push(valor);
-    }
-    return arr2
-}
- 
- 
+// ---------- Exercício 1 ------------ // 
 /*
  Criar outro array (Ex1_array2) com base no array 1 duplicando os valores
  Usa map() marreco
 */
  
 const array1 = [1,2,3,5,10,30];
-const array2 = array1.map(function (n) {
-    return n * 2;  //  precisa do return
-})
+const array2 = array1.map(n => n*2)
  
 // ---------- Exercício 2 ------------ //
- 
 /*
  Percorra o array de nomes e para cada elemento adicione um elemento <li> no array liList
  Use forEach() marreco
@@ -29,18 +15,13 @@ const array2 = array1.map(function (n) {
  
 let liList = [];
 const arrayNomes = ['Gabriel', 'Anna', 'Fernando', 'Jessica', 'Tantofaz'];
-    arrayNomes.forEach(function (el) {
- 
-        liList.push(`<li>${el}</li>`);          //nn precisa do return
- 
-    })
+arrayNomes.forEach(nome => liList.push(`<li>${el}<li>`));
  
 // ---------- Exercício 3 ------------ //
  
 /*
  Com base no array alunos1, veja se:
  1 - Algum tem a nota menor do que 6 (use some())
- 
  2 - Se todos têm a nota maior do que 6 (use every())
 */
  
@@ -62,13 +43,8 @@ const alunos1 = [
         nota: 9.8,
     },
 ];
-const seAlgumaNotaMenor = alunos1.some(function (aluno) {
-    return aluno.nota < 6
-})
-
-const media =alunos1.every(function (aluno) {
-    return aluno.nota > 6
-})
+const seAlgumaNotaMenor = alunos1.some(aluno => aluno.nota < 6);
+const seTodosNotaMaior =alunos1.every(({ nota }) => nota > 6);
  
 // ---------- Exercício 4 ------------ //
  
@@ -88,23 +64,14 @@ const dados = [
     { nome: 'maria', ativo: false, pontos: '8.5' },
     { nome: 'Abreu', ativo: true, pontos: '2.2' },
     { nome: 'Clara', ativo: false, pontos: '6.4' },
-]
+];
 
-const passo1 =dados.map(function(dado) {
-    dado.pontos=Number(dado.pontos)
-    return dado;
-})
-const passo2 = passo1.filter(function(dado) {
-    return dado.ativo && dado.pontos>6
-})
-const passo3 = passo2.reduce(function (acumulador, dado) { //acamulador1   = acamulador(1)+2
-    return acumulador.pontos + dado.pontos;
-})
-
-// solução mais direta
-const resultado = dados.map(dado => {
+const arrayMapping = dado => {
     dado.pontos = +dado.pontos;
     return dado;
-})
-.filter(({ ativo, pontos }) => ativo && pontos > 6)
-.reduce((previous, current) => previous.pontos + current.pontos)
+}
+
+const resultado = dados
+    .map(arrayMapping)
+    .filter(({ ativo, pontos }) => ativo && pontos > 6)
+    .reduce((previous, current) => previous.pontos + current.pontos)
