@@ -34,16 +34,6 @@ const arrayNomes = ['Gabriel', 'Anna', 'Fernando', 'Jessica', 'Tantofaz'];
         liList.push(`<li>${el}</li>`);          //nn precisa do return
  
     })
-   
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
 // ---------- Exercício 3 ------------ //
  
@@ -72,16 +62,13 @@ const alunos1 = [
         nota: 9.8,
     },
 ];
-    const seAlgumaNotaMenor = alunos1.some(function (aluno) {
-        return aluno.nota < 6
- 
-    })
- 
-    const media =alunos1.every(function (aluno) {
-        return aluno.nota > 6
-    })
- 
- 
+const seAlgumaNotaMenor = alunos1.some(function (aluno) {
+    return aluno.nota < 6
+})
+
+const media =alunos1.every(function (aluno) {
+    return aluno.nota > 6
+})
  
 // ---------- Exercício 4 ------------ //
  

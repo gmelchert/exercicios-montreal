@@ -39,6 +39,27 @@ const item = {
     lote: '01EACN',
 }
 
+//----------------- Exercício 5 -----------------//
+/*
+    Com base no objeto casa faça o seguinte:
+    1 - Crie variáveis desestruturando o objeto
+    2 - Ao desestruturar o atributo "preco" renomeie a variável para "valor"
+    3 - Crie uma variável pessoa que receberá os valores do atributo "proprietario" mais 2 atributos de sua escolha
+        (Use o operador spread para esse caso)
+*/
+
+const casa = {
+    cor: 'verde',
+    metros: 300,
+    preco: 300000,
+    negociavel: true,
+    proprietario: {
+        nome: 'Gabriel',
+        idade: 21,
+        primeiroDono: false,
+    }
+}
+
 //------------------- Desafio -------------------//
 /*
     Com base no objeto avo, para cada elemento da sua familia exiba uma mensagem no console.log dizendo o seguinte:
