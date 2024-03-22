@@ -22,3 +22,11 @@
     - Crie uma outra função que deverá retornar os dados da primeira api por userId
 */
 
+// ---------- Exercício 5 ------------ //
+/*
+    Seguindo a mesma ideia do exercício 4...
+    - Crie uma função assíncrona que chama a API GET "https://jsonplaceholder.typicode.com/posts" e retorna os dados da API.
+    - Crie uma outra função que deverá retornar os dados da primeira api por userId
+
+    A função que pega dados por ID de usuário deve ser uma função recursiva que é chamada quando há registros do próximo usuário
+*/
