@@ -15,6 +15,32 @@
 
 //----------------- Exercício 3 -----------------//
 /*
+    Pegue todos os atributos do objeto "pessoa" e atribua esse valor à uma variável chamada atributos
+    Pegue todos os valores do objeto "pessoa" e atribua esse valor à uma variável chamada valores
+*/
+
+const pessoa = {
+    nome: 'Gabriel',
+    altura: 178,
+    idade: 21,
+    sexo: 'M',
+    profissao: 'Desenvolvedor',
+}
+
+//----------------- Exercício 4 -----------------//
+/*
+    Crie duas funções, uma irá incrementar a quantidade de itens enquanto a outra irá decrementar.
+    Ambas funções devem estar dentro do objeto item e devem usar a palavra "this" para a resolução.
+    Recomendo que use funções anônimas também
+*/
+
+const item = {
+    quantidade: 1,
+    lote: '01EACN',
+}
+
+//------------------- Desafio -------------------//
+/*
     Com base no objeto avo, para cada elemento da sua familia exiba uma mensagem no console.log dizendo o seguinte:
     "Nome: {nome} grau: {grau}"
 */
@@ -45,7 +71,12 @@ const avo = {
                 {
                     nome: 'Felipe',
                     grau: 'Primo',
-                    filhos: [],
+                    filhos: [{
+                        nome: "Enzo",
+                        grau: "Primo 2",
+                        filhos: [],
+                    }],
+                    conjuge: 'Clara',
                 },
                 {
                     nome: 'Jorge',
